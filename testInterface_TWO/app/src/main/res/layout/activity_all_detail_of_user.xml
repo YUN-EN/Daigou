@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AllDetailOfUserActivity">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/Card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/titleDealProgress"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="95dp"
+                android:fontFamily="@font/lobster"
+                android:text="@string/detail"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold|italic" />
+
+            <ImageView
+                android:id="@+id/goClearActivity"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/ic_keyboard_arrow" />
+
+            <ImageView
+                android:id="@+id/goOut"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="4dp"
+                android:src="@drawable/ic_close" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/contentUserCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/Card"
+        android:layout_marginTop="3dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/itemDetailUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:text="@string/itemName"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+            <TextView
+                android:id="@+id/itemPayDateDetail"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="@string/itemPayDate"
+                android:textSize="15sp"
+                android:textStyle="italic"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/itemDetailUserName"/>
+
+
+
+            <TextView
+                android:id="@+id/itemReceiveDate"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="@string/itemReceiveDate"
+                android:textSize="15sp"
+                android:textStyle="italic"
+                app:layout_constraintTop_toBottomOf="@id/itemPayDateDetail"
+                android:layout_marginStart="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="10dp" />
+
+
+            <TextView
+                android:id="@+id/itemDateBuyerInformation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_0"
+                android:textSize="15sp"
+                android:textStyle="italic"
+                android:layout_marginStart="6dp"
+                app:layout_constraintBottom_toBottomOf="@+id/itemPayDateDetail"
+                app:layout_constraintStart_toEndOf="@id/itemPayDateDetail"
+                app:layout_constraintTop_toTopOf="@+id/itemPayDateDetail" />
+
+            <TextView
+                android:id="@+id/itemReceiveDateBuyerInformation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="@string/_0"
+                android:textSize="15sp"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toBottomOf="@+id/itemReceiveDate"
+                app:layout_constraintStart_toEndOf="@id/itemReceiveDate"
+                app:layout_constraintTop_toTopOf="@+id/itemReceiveDate" />
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/silver"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="3dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/itemReceiveDateBuyerInformation" />
+            <TextView
+                android:id="@+id/itemIDNumBuyer"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textStyle="italic"
+                android:text="@string/itemIDInformation"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintTop_toBottomOf="@id/view"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/itemIDBuyerInformation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="@string/_0"
+                android:textSize="15sp"
+                android:textStyle="italic|bold"
+                android:textColor="@color/text_blue"
+                app:layout_goneMarginStart="6dp"
+                app:layout_constraintBottom_toBottomOf="@+id/itemIDNumBuyer"
+                app:layout_constraintStart_toEndOf="@id/itemIDNumBuyer"
+                app:layout_constraintTop_toTopOf="@+id/itemIDNumBuyer" />
+            <TextView
+                android:id="@+id/itemBuyNum"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textStyle="italic"
+                android:text="@string/itemBuyNumInformation"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@id/itemIDNumBuyer"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/itemBuyNumBuyerInformation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_0"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="italic|bold"
+                android:layout_marginStart="6dp"
+                app:layout_constraintBottom_toBottomOf="@+id/itemBuyNum"
+                app:layout_constraintStart_toEndOf="@id/itemBuyNum"
+                app:layout_constraintTop_toTopOf="@+id/itemBuyNum"
+                />
+            <TextView
+                android:id="@+id/itemBuyTotalBuyer"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textStyle="italic"
+                android:text="@string/itemBuyTotalInformation"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@id/itemBuyNum"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/itemBuyTotalBuyerInformation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_0"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="italic|bold"
+                android:layout_marginStart="6dp"
+                app:layout_constraintBottom_toBottomOf="@+id/itemBuyTotalBuyer"
+                app:layout_constraintStart_toEndOf="@id/itemBuyTotalBuyer"
+                app:layout_constraintTop_toTopOf="@+id/itemBuyTotalBuyer"
+                />
+            <TextView
+                android:id="@+id/itemBuyAllBuyer"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textStyle="italic"
+                android:text="@string/itemBuyAllInformation"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@id/itemBuyTotalBuyer"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/itemBuyerBuyAllInformation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_0"
+                android:textColor="@color/text_blue"
+                android:textSize="15sp"
+                android:textStyle="italic|bold"
+                android:layout_marginStart="6dp"
+                app:layout_constraintBottom_toBottomOf="@+id/itemBuyAllBuyer"
+                app:layout_constraintStart_toEndOf="@id/itemBuyAllBuyer"
+                app:layout_constraintTop_toTopOf="@+id/itemBuyAllBuyer"
+                />
+            <View
+                android:id="@+id/viewLayout"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/silver"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="3dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/itemBuyAllBuyer" />
+            <TextView
+                android:id="@+id/itemBuyerText"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:textStyle="italic|bold"
+                android:textColor="@color/black"
+                android:text="@string/itemBuyerInformation"
+                app:layout_constraintTop_toBottomOf="@id/viewLayout"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+            <TextView
+                android:id="@+id/itemBuyerUserInformation"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:textStyle="italic"
+                android:text="@string/itemBuyerID"
+                android:textSize="15sp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/itemBuyerText" />
+
+            <TextView
+                android:id="@+id/itemSellerName"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/itemBuyerName"
+                android:textSize="15sp"
+                android:textStyle="italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/itemBuyerUserInformation" />
+
+
+            <TextView
+                android:id="@+id/itemBuyerMail"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/itemBuyerMail"
+                android:textSize="15sp"
+                android:textStyle="italic"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/itemSellerName"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/itemBuyerID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/_0"
+                android:textSize="15sp"
+                android:textStyle="italic|bold"
+                app:layout_constraintBottom_toBottomOf="@+id/itemBuyerUserInformation"
+                app:layout_constraintStart_toEndOf="@id/itemBuyerUserInformation"
+                app:layout_constraintTop_toTopOf="@+id/itemBuyerUserInformation" />
+
+            <TextView
+                android:id="@+id/itemSBuyerNameInformation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/_0"
+                android:textSize="15sp"
+                android:textStyle="italic|bold"
+                app:layout_constraintBottom_toBottomOf="@+id/itemSellerName"
+                app:layout_constraintStart_toEndOf="@id/itemSellerName"
+                app:layout_constraintTop_toTopOf="@+id/itemSellerName" />
+
+            <TextView
+                android:id="@+id/itemBuyerMailInformation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/_0"
+                android:textSize="15sp"
+                android:textStyle="italic|bold"
+                app:layout_constraintBottom_toBottomOf="@+id/itemBuyerMail"
+                app:layout_constraintStart_toEndOf="@id/itemBuyerMail"
+                app:layout_constraintTop_toTopOf="@+id/itemBuyerMail" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

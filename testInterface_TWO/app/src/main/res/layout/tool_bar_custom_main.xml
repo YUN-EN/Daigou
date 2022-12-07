@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+        <TextView
+            android:id="@+id/titleDealProgress"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/lobster"
+            android:text="@string/Daigou"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold|italic" />
+        <ImageView
+            android:id="@+id/goBackPerson"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="55dp"
+            android:src="@drawable/ic_shopping_cart" />
+        <ImageView
+            android:id="@+id/goMessage"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/messenger"/>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="8dp"
+    android:background="#FCEDD3"
+
+    tools:context=".MyShopItemActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/silver"
+        app:layout_constraintBottom_toTopOf="@id/myShopItemImage" />
+
+    <ImageView
+        android:id="@+id/myShopItemImage"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ssss" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/silver"
+        app:layout_constraintTop_toBottomOf="@id/myShopItemImage" />
+
+    <Button
+        android:id="@+id/goBackMyShopItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:backgroundTint="@color/white"
+        android:elevation="6dp"
+        android:text="@string/cancel"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/editMyShopItemButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:backgroundTint="@color/white"
+        android:elevation="6dp"
+        android:text="@string/edit"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/myShopItemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/shopItemName"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/myShopItemImage" />
+
+    <TextView
+        android:id="@+id/mySHopItemDateText"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/online_date"
+        android:textColor="#757575"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="@+id/myShopItemName"
+        app:layout_constraintTop_toBottomOf="@id/myShopItemName" />
+
+    <TextView
+        android:id="@+id/myShopItemMakeDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
+        android:text="2022/03/25"
+        android:textColor="#757575"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/mySHopItemDateText"
+        app:layout_constraintStart_toEndOf="@+id/mySHopItemDateText"
+        app:layout_constraintTop_toBottomOf="@+id/myShopItemName"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/myShopItemPriceText"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/each_price"
+        android:textColor="#757575"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="@+id/mySHopItemDateText"
+        app:layout_constraintTop_toBottomOf="@+id/mySHopItemDateText" />
+
+    <TextView
+        android:id="@+id/myShopItemPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="@string/_0"
+        android:textColor="#757575"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/myShopItemPriceText"
+        app:layout_constraintStart_toEndOf="@+id/myShopItemPriceText"
+        app:layout_constraintTop_toTopOf="@+id/myShopItemPriceText" />
+
+    <TextView
+        android:id="@+id/myShopItemCountText"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/each_count"
+        android:textColor="#757575"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@+id/myShopItemPriceText"
+        app:layout_constraintStart_toStartOf="@+id/myShopItemPriceText"
+        app:layout_constraintTop_toBottomOf="@+id/myShopItemPriceText" />
+
+    <TextView
+        android:id="@+id/myShopItemCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="@string/_0"
+        android:textColor="#757575"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/myShopItemCountText"
+        app:layout_constraintStart_toEndOf="@+id/myShopItemCountText"
+        app:layout_constraintTop_toTopOf="@+id/myShopItemCountText"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/myShopItemNoticeText"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/each_notice"
+        android:textColor="#757575"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@+id/myShopItemCountText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/myShopItemCountText"
+        app:layout_constraintTop_toBottomOf="@+id/myShopItemCountText" />
+
+    <TextView
+        android:id="@+id/myShopItemNotice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="@string/_0"
+        android:textColor="#757575"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/myShopItemNoticeText"
+        app:layout_constraintStart_toEndOf="@+id/myShopItemNoticeText"
+        app:layout_constraintTop_toTopOf="@+id/myShopItemNoticeText"
+        app:layout_constraintVertical_bias="0.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>

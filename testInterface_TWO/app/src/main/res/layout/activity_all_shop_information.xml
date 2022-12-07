@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FCEDD3"
+    tools:context=".AllShopInformationActivity">
+
+    <ImageView
+        android:id="@+id/shopItemImage"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ssss" />
+
+    <ImageView
+        android:id="@+id/backShopMall"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/goItemAllDealComment"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:src="@drawable/ic_access_time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/userInformationCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/shopItemImage">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userImageInformation"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:src="@color/primary" />
+
+        <TextView
+            android:id="@+id/userNameInformation"
+            android:layout_width="155dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="78sp"
+            android:layout_marginTop="10dp"
+            android:text="@string/my_deal_tab_seller"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold|italic" />
+
+        <Button
+            android:id="@+id/checkUserShopButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="250dp"
+            android:backgroundTint="#F7B228"
+            android:layout_marginTop="4dp"
+            android:text="@string/check_shop"
+            android:textColor="#7F968D"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cornerRadius="10dp" />
+
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/shopItemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/shopItemName"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/userInformationCard"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/userInformationCard"
+        app:layout_constraintTop_toBottomOf="@id/userInformationCard" />
+
+    <TextView
+        android:id="@+id/makeDateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/makeDate"
+        android:textColor="#757575"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="@+id/shopItemName"
+        app:layout_constraintTop_toBottomOf="@id/shopItemName" />
+
+    <TextView
+        android:id="@+id/itemMakeDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        android:text="2022/03/25"
+        android:textColor="#757575"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/makeDateText"
+        app:layout_constraintStart_toEndOf="@+id/makeDateText"
+        app:layout_constraintTop_toBottomOf="@+id/shopItemName" />
+
+    <TextView
+        android:id="@+id/itemInformation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/size_all"
+        android:textColor="#757575"
+        android:textSize="18sp"
+        android:textStyle="italic|bold"
+        app:layout_constraintStart_toStartOf="@+id/makeDateText"
+        app:layout_constraintTop_toBottomOf="@+id/makeDateText" />
+
+    <TextView
+        android:id="@+id/itemProblem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/say_your_problem"
+        android:textColor="#757575"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="@+id/itemInformation"
+        app:layout_constraintTop_toBottomOf="@+id/itemInformation" />
+
+    <TextView
+        android:id="@+id/itemPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="104dp"
+        android:text="@string/moneyMark"
+        android:textColor="#A1887F"
+        android:textSize="24sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.676"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/itemPriceNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="@string/_0"
+        android:textColor="@color/silver"
+        android:textSize="24sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/itemPrice"
+        app:layout_constraintStart_toEndOf="@+id/itemPrice"
+        app:layout_constraintTop_toTopOf="@+id/itemPrice"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/AddToCartButton"
+        android:layout_width="205dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/deepSkyBlue"
+        android:text="@string/add_to_cart"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.543"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemPrice"
+        app:layout_constraintVertical_bias="0.407" />
+
+    <ImageView
+        android:id="@+id/addImageView"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:background="#57D4E4"
+        app:layout_constraintBottom_toBottomOf="@+id/buyNumberText"
+        app:layout_constraintEnd_toStartOf="@+id/itemPrice"
+        app:layout_constraintHorizontal_bias="0.028"
+        app:layout_constraintStart_toEndOf="@+id/buyNumberText"
+        app:layout_constraintTop_toTopOf="@+id/buyNumberText"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_add" />
+
+    <TextView
+        android:id="@+id/buyNumberText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="@string/_0"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="@+id/removeImageView"
+        app:layout_constraintStart_toEndOf="@+id/removeImageView"
+        app:layout_constraintTop_toTopOf="@+id/removeImageView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/removeImageView"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="28dp"
+        android:background="#57D4E4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/itemPrice"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_remove" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

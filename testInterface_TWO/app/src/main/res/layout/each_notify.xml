@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:padding="10dp">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/notifyUserImage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/user" />
+
+    <TextView
+        android:id="@+id/notifyUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/notifyUserImage"
+        android:layout_alignBottom="@+id/notifyUserImage"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="33dp"
+        android:layout_toEndOf="@+id/notifyUserImage"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/username"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/notifyMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/notifyUserImage"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="0dp"
+        android:layout_toEndOf="@+id/notifyUserImage"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/notifyMessage"
+        android:textColor="@color/black" />
+    <ImageView
+        android:id="@+id/notifyPostImage"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@drawable/retangle"
+        android:layout_alignParentEnd="true" />
+
+
+</RelativeLayout>

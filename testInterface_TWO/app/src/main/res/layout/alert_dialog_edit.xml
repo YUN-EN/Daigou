@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="20dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15sp">
+
+            <TextView
+                android:id="@+id/editTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:text="@string/one_price"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.158" />
+
+            <EditText
+                android:id="@+id/editTitle"
+                android:layout_width="153dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="20dp"
+                android:hint="@string/one_price"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/editTextView"
+                app:layout_constraintStart_toEndOf="@id/editTextView"
+                app:layout_constraintTop_toTopOf="@id/editTextView"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/contentTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/count"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/editTextView"
+                app:layout_constraintVertical_bias="0.04" />
+
+            <EditText
+                android:id="@+id/editContent"
+                android:layout_width="181dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="20dp"
+                android:hint="@string/count"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:maxLines="3"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/contentTextView"
+                app:layout_constraintStart_toEndOf="@id/contentTextView"
+                app:layout_constraintTop_toTopOf="@id/contentTextView"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/noticeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/notice"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/contentTextView"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/contentTextView"
+                app:layout_constraintTop_toBottomOf="@+id/contentTextView" />
+
+            <EditText
+                android:id="@+id/editNotice"
+                android:layout_width="181dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="20dp"
+                android:hint="@string/notice"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:maxLines="3"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/noticeTextView"
+                app:layout_constraintStart_toEndOf="@+id/noticeTextView"
+                app:layout_constraintTop_toTopOf="@+id/noticeTextView"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/editButton"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="@color/yellow"
+                android:text="@string/edit"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="15dp"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/editNotice"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/cancelButtonAlert"
+                app:layout_constraintTop_toBottomOf="@+id/editNotice" />
+
+            <Button
+                android:id="@+id/cancelButtonAlert"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#4CAF50"
+                android:text="@string/cancel"
+                android:textColor="@color/white"
+                android:layout_marginBottom="15dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/noticeTextView"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/noticeTextView"
+                app:layout_constraintTop_toBottomOf="@+id/noticeTextView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

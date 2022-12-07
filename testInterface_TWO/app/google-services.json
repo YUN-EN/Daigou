@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "982684845114",
+    "project_id": "testinterface-two",
+    "storage_bucket": "testinterface-two.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:982684845114:android:bcf6a85c889339a7ade103",
+        "android_client_info": {
+          "package_name": "com.example.testinterface_two"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "982684845114-v571210nd5duo33m6mveh8877d6s4oev.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpHQZa2CDALb-zuFwwjgJaoSo4fwhn9oc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "982684845114-v571210nd5duo33m6mveh8877d6s4oev.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
